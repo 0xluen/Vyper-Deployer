@@ -29,7 +29,7 @@ To install the dependencies automatically, run the following command:
 
 3. Choose one of the following options by entering the corresponding number in the terminal:
 
-<code>chmod +x vyper.sh</code>
+<code>chmod +x vyper.sh</code> <br>
 <code>./vyper.sh</code>
 
 ### Option 1: Install Dependencies
