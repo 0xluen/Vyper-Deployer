@@ -56,7 +56,7 @@ elif [[ "$choice" == "2" ]]; then
     fi
     echo "Running compiler ..."
     python3 compiler.py
-    echo "Script execution completed."
+    echo "Contract compiled successfully..."
 elif [[ "$choice" == "3" ]]; then
     # Deploy
     if [ ! -f "compiler.py" ]; then
@@ -65,12 +65,10 @@ elif [[ "$choice" == "3" ]]; then
     fi
     echo "Running compiler ..."
     python3 compiler.py
-    echo "Script execution completed."
+    echo "Contract compiled successfully..."
     npx tsc
     node --no-warnings deployer.js
     rm -rf deployer.js
-    version=$(python3 -m vyper --version)
-    echo "Compiler Version: $version"
 else
     echo "Invalid choice. Please enter 1, 2, or 3."
     exit 1

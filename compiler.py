@@ -76,3 +76,16 @@ json_output_method_identifiers = json.dumps(result_method_identifiers)
 
 with open("artifacts/contract_output_method_identifiers.json", "w") as f:
     f.write(json_output_method_identifiers)
+
+def get_vyper_version():
+    try:
+        result = subprocess.check_output(['python3', '-m', 'vyper', '--version'], text=True)
+        version = result.strip()
+        return version
+    except FileNotFoundError:
+        return "Vyper is not installed."
+    except subprocess.CalledProcessError:
+        return "Unable to retrieve Vyper version."
+
+vyper_version = get_vyper_version()
+print("Compiler Version:", vyper_version)
