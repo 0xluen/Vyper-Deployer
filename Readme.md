@@ -14,7 +14,7 @@ Before running the code in this repository, make sure you have the following dep
 
 To install the dependencies automatically, run the following command:
 <br>
-./install.sh
+./vyper.sh
 
 ## Usage
 
