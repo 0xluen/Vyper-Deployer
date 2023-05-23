@@ -1,0 +1,1 @@
+[{"stateMutability": "nonpayable", "type": "function", "name": "swap", "inputs": [{"name": "i", "type": "int128"}, {"name": "j", "type": "int128"}, {"name": "dx", "type": "uint256"}, {"name": "min_dy", "type": "uint256"}], "outputs": []}]
