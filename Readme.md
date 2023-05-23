@@ -10,6 +10,7 @@ Before running the code in this repository, make sure you have the following dep
 - Python 3.10
 - Tkinter (for GUI support)
 - Node.js
+- Vyper 0.3.7
 
 To install the dependencies automatically, run the following command:
 <br>
