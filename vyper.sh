@@ -25,12 +25,16 @@ if [[ "$choice" == "1" ]]; then
             sudo apt update
             sudo apt install git curl build-essential libssl-dev zlib1g-dev libbz2-dev \
                 libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev \
-                xz-utils tk-dev libffi-dev liblzma-dev
+                xz-utils tk-dev libffi-dev liblzma-dev 
             curl https://pyenv.run | bash
+            rm -rf /root/.pyenv
+            sudo apt update
+            sudo apt install curl git python3-pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
             echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
             echo 'eval "$(pyenv init -)"' >> ~/.bashrc
             echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
             source ~/.bashrc
+            
             pyenv install 3.10.0
             pyenv global 3.10.0
             sudo apt-get install -y nodejs
