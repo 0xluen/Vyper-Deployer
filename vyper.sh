@@ -6,7 +6,6 @@ echo "3 - Deploy"
 read -p "Enter your choice (1, 2, or 3): " choice
 
 if [[ "$choice" == "1" ]]; then
-    # İnstall seçeneği
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         if [ -x "$(command -v pacman)" ]; then
             echo "Arch Linux detected. Installing..."
