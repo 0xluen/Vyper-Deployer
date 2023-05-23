@@ -33,7 +33,7 @@ To install the dependencies automatically, run the following command:
 <code>chmod +x vyper.sh</code> <br>
 <code>./vyper.sh</code>
 
-### Option 1: Install Dependencies
+### Option 1: Install Dependencies (Arch & Ubuntu)
 
 Select "1. Install" in the console to install the required dependencies.
 
