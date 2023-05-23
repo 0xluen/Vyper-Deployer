@@ -6,6 +6,7 @@ echo "3 - Deploy"
 read -p "Enter your choice (1, 2, or 3): " choice
 
 if [[ "$choice" == "1" ]]; then
+    # İnstall
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         if [ -x "$(command -v pacman)" ]; then
             echo "Arch Linux detected. Installing..."
@@ -48,7 +49,7 @@ if [[ "$choice" == "1" ]]; then
         exit 1
     fi
 elif [[ "$choice" == "2" ]]; then
-    # Only Compile seçeneği
+    # Only Compile
     if [ ! -f "compiler.py" ]; then
         echo "compiler.py file not found."
         exit 1
@@ -57,7 +58,7 @@ elif [[ "$choice" == "2" ]]; then
     python3 compiler.py
     echo "Script execution completed."
 elif [[ "$choice" == "3" ]]; then
-    # Deploy seçeneği
+    # Deploy
     if [ ! -f "compiler.py" ]; then
         echo "compiler.py file not found."
         exit 1
