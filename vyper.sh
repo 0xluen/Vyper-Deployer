@@ -34,9 +34,6 @@ if [[ "$choice" == "1" ]]; then
             echo 'eval "$(pyenv init -)"' >> ~/.bashrc
             echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
             source ~/.bashrc
-            
-            pyenv install 3.10.0
-            pyenv global 3.10.0
             sudo apt-get install -y nodejs
         else
             echo "Unsupported operating system detected."
