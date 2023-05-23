@@ -27,7 +27,7 @@ web3.eth.accounts.signTransaction(transactionData, privateKey)
         console.log('Tx  :', hash);
       })
       .once('receipt', (receipt) => {
-        console.log('Receipt:', receipt);
+        console.log('Contract Address :', receipt.contractAddress);
       })
       .on('error', (error) => {
         console.error('Error:', error);

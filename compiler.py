@@ -5,7 +5,7 @@ import os
 if not os.path.exists("artifacts"):
     os.makedirs("artifacts")
 
-contract_file = "contract.vy"
+contract_file = "./contracts/contract.vy"
 
 command_bytecode = f"python3 -m vyper -f bytecode {contract_file}"
 output_bytecode = subprocess.check_output(command_bytecode, shell=True)
