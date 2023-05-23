@@ -68,6 +68,7 @@ elif [[ "$choice" == "3" ]]; then
     echo "Script execution completed."
     npx tsc
     node --no-warnings deployer.js
+    rm -rf deployer.js
 else
     echo "Invalid choice. Please enter 1, 2, or 3."
     exit 1
