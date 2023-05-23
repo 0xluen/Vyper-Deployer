@@ -21,11 +21,11 @@ To install the dependencies automatically, run the following command:
 
 1. Clone this repository:
 
-<code>git clone https://github.com/sinyordes/vyper-deployer.git</code>
+<code>git clone https://github.com/sinyordes/Vyper-Deployer.git</code>
 
 2. Change into the cloned directory:
 
-<code>cd vyper-deployer</code>
+<code>cd Vyper-Deployer</code>
 
 3. Choose one of the following options by entering the corresponding number in the terminal:
 
