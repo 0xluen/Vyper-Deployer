@@ -2,6 +2,12 @@
 
 This repository contains the compile and deploy script for a smart contract written in the Vyper language.
 - Please make the necessary adjustments in the .env file first.
+### Powershell Run Command For Windows Users
+
+<code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code>
+<br>
+<code>.\vyper.ps1</code>
+
 ## Prerequisites
 
 Before running the code in this repository, make sure you have the following dependencies installed:
