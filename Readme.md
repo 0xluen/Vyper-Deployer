@@ -6,8 +6,6 @@ This repository contains the compile and deploy script for a smart contract writ
 
 <code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code>
 <br>
-<code>pip install vyper</code>
-<br>
 <code>.\vyper.ps1</code>
 
 ## Prerequisites
