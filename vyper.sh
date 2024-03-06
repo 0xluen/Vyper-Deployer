@@ -6,7 +6,7 @@ echo "3 - Deploy"
 read -p "Enter your choice (1, 2, or 3): " choice
 
 if [[ "$choice" == "1" ]]; then
-    # İnstall
+    # Install
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         if [ -x "$(command -v pacman)" ]; then
             echo "Arch Linux detected. Installing..."
@@ -21,7 +21,7 @@ if [[ "$choice" == "1" ]]; then
             pyenv global 3.10.0
             sudo pacman -S nodejs
         elif [ -x "$(command -v apt)" ]; then
-            echo "Ubuntu detected. Installing..."
+            echo "Debian detected. Installing..."
             sudo apt update
             sudo apt install git curl build-essential libssl-dev zlib1g-dev libbz2-dev \
                 libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev \
@@ -44,8 +44,21 @@ if [[ "$choice" == "1" ]]; then
         pip install vyper==0.3.7
         pip3 install python-dotenv
         echo "Installation completed."
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        # macOS detected. Install dependencies for macOS
+        brew install pyenv
+        echo 'eval "$(pyenv init --path)"' >> ~/.bash_profile
+        source ~/.bash_profile
+        pyenv install 3.10.0
+        pyenv global 3.10.0
+        brew install node
+        npm install
+        echo "Installing Vyper..."
+        pip install vyper==0.3.7
+        pip3 install python-dotenv
+        echo "Installation completed."
     else
-        echo "This script only works on Linux operating systems."
+        echo "Unsupported operating system detected."
         exit 1
     fi
 elif [[ "$choice" == "2" ]]; then
