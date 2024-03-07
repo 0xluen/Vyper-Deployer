@@ -56,6 +56,7 @@ if [[ "$choice" == "1" ]]; then
         echo "Installing Vyper..."
         pip install vyper==0.3.7
         pip3 install python-dotenv
+        python3 -m pip install vyper
         echo "Installation completed."
     else
         echo "Unsupported operating system detected."
